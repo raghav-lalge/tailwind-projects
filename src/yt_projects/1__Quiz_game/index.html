@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="../../../output.css">
+    
+
+</head>
+<body>
+    <div class="w-full">
+        <div class="screen  bg-yellow-100 flex justify-center items-center min-h-screen" id="start-screen">
+            <div class="bg-white rounded-lg shadow-2xl p-10 w-full max-w-lg text-center">
+                <h1 class="text-orange-600 text-4xl font-bold pb-2">Quiz Time!</h1>
+                <p class="text-black font-semibold">Test this knowledge with these fun questions</p>
+                <button id="start-btn" class="bg-orange-600 text-white rounded-md px-5 py-2 mt-4 shadow-xl hover:bg-orange-800">Start Quiz</button>
+            </div>
+            
+        </div>
+        
+        <div class="screen hidden bg-yellow-100 justify-center items-center min-h-screen" id="quiz-screen">
+
+            <div class="bg-white rounded-lg shadow-2xl p-10 w-full max-w-lg ">
+            <div class="quiz-header ">
+                <h2 class="text-center font-bold pb-4" id="question-text">What is the Capital of France?</h2>
+                <div class="flex justify-between items-center">
+                    <p>Question <span id="current-question">1</span> of <span id="total-questions">5</span>  </p>
+                    <p>Score: <span id="score">0</span></p>
+                </div>
+            </div>
+
+            <div id="answers-container" class="answers-container grid grid-cols-1 gap-3 pt-2">  
+                    <button class="bg-yellow-100 rounded-md p-2 border border-gray-300 shadow-md hover:bg-yellow-400">London</button>
+                    <button class="bg-yellow-100 rounded-md p-2 border border-gray-300 shadow-md hover:bg-yellow-400">Berlin</button>
+                    <button class="bg-yellow-100 rounded-md p-2 border border-gray-300 shadow-md hover:bg-yellow-400">Paris</button>
+                    <button class="bg-yellow-100 rounded-md p-2 border border-gray-300 shadow-md hover:bg-yellow-400">Madrid</button>
+            </div>
+
+            <div class="progress-bar h-2.5 bg-yellow-100 rounded-md overflow-hidden mt-5">
+                <div id="progress" class="h-full bg-orange-500 w-0 transition-all duration-300"></div>
+
+            </div>
+
+            </div>
+
+        </div>
+
+        <div id="result-screen" class="screen hidden bg-yellow-100  justify-center items-center min-h-screen w-full">
+            
+            <div class="bg-white rounded-lg shadow-2xl p-10 w-full max-w-lg">
+                <h1 class="text-orange-500 font-bold text-2xl text-center mb-4">Quiz Results</h1>
+            <div class="result-info p-6 text-center bg-orange-100 rounded-md">
+
+                    <p class="mb-3 font-semibold">You scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
+                    <div class="text-orange-500 font-bold text-2xl" id="result-message">Good Job</div>
+            </div>
+
+            <div class="flex justify-center">
+                <button class="bg-orange-500 text-white shadow-2xl rounded-md px-5 py-2 hover:bg-orange-700 shadow-rose-700" id="restart-btn">Restart Quiz</button>
+            </div>
+
+                
+            </div>
+        
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    
+</body>
+</html>
